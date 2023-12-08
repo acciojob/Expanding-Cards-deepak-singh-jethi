@@ -43,7 +43,7 @@ images.forEach((image, index) => {
 	
 
   const textElement = document.createElement("span");
-  textElement.className = "img-txt";
+  textElement.className = "img-text";
   textElement.innerText = image.text;
 
   const wrapper = document.createElement("div");
