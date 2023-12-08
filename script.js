@@ -36,9 +36,11 @@ const onClickImage = (event) => {
 };
 images.forEach((image, index) => {
   const imageElement = document.createElement("img");
-  imageElement.className = "pannel";
+  imageElement.className = "panel";
   imageElement.src = image.link;
-  imageElement.id = `pannel-${index + 1}`;
+  imageElement.id = `panel-${index + 1}`;
+
+	
 
   const textElement = document.createElement("span");
   textElement.className = "img-text";
@@ -48,6 +50,9 @@ images.forEach((image, index) => {
   wrapper.className = "wrapper";
   wrapper.append(imageElement, textElement);
 
+	 if(index===0){
+    wrapper.classList.add("active");
+  }
   wrapper.addEventListener("click", onClickImage);
 
   container.appendChild(wrapper);
